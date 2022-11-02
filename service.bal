@@ -20,7 +20,8 @@ service / on new http:Listener(9090) {
             stream<github:Repository, error?> getRepositoriesResponse = check githubEp->getRepositories();
             //return error("name should not be empty!");
             log:printInfo(check getRepositoriesResponse.toString());
+        return "Repo Names, " + getRepositoriesResponse.toString();
         }
-        return "Repo Names, " + organization;
+        return error("name should not be empty!");
     }
 }
