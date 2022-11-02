@@ -13,7 +13,7 @@ service / on new http:Listener(9090) {
     # + return - string name with hello message or error
     resource function get ratings(string organizationName, int limitNumber) returns string|error {
         // Send a response back to the caller.
-        var variable = conf;
+        //var variable = conf;
         if organizationName is "" {
             return error("Organization name should not be empty!");
         }
