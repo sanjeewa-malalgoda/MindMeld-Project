@@ -7,7 +7,7 @@ import ballerina/http;
 service / on new http:Listener(9090) {
 
     # A resource for generating greetings
-    # + name - the input string name
+    # + organization - the input string organization
     # + return - string name with hello message or error
     resource function get ratings(int count = 10, string organization = "wso2") returns string|error {
         // Send a response back to the caller.
