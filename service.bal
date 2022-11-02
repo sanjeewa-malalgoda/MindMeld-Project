@@ -29,6 +29,6 @@ service / on new http:Listener(9090) {
             order by repo.stargazerCount descending
             limit limitNumber
             select repo.name;
-        return "Top rates repos are, " + topRatedRepos.toString();
+        return "Top rates repos, " + topRatedRepos.toString();
     }
 }
