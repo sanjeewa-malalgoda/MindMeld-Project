@@ -1,6 +1,6 @@
 import ballerinax/github;
 import ballerina/http;
-import ballerina/log;
+//import ballerina/log;
 
 # A service representing a network-accessible API
 # bound to port `9090`.
@@ -19,7 +19,7 @@ service / on new http:Listener(9090) {
             });
             stream<github:Repository, error?> getRepositoriesResponse = check githubEp->getRepositories();
             //return error("name should not be empty!");
-            log:printInfo(check getRepositoriesResponse.toString());
+            //log:printInfo(check getRepositoriesResponse.toString());
             return "Repo Names, " + getRepositoriesResponse.toString();
         }
         return error("name should not be empty!");
